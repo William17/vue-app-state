@@ -5,13 +5,26 @@ A Vue plugin for sharing and storing app-level data and state with memory or loc
 `npm install @william17/vue-app-state --save`  
 
 ## Quick Start  
-In app entry:
+
+appState.js
 ```js
 import Vue from 'vue'
 import AppState from '@william17/vue-app-state'  
 
 Vue.use(AppState)
 ```  
+
+main.js
+```js
+import Vue from 'vue'
+import App from './App'
+import './appState.js'
+
+new Vue({
+  el: '#app',
+  render: h => h(App)
+})
+```
 
 In one component method:  
 ```js
@@ -36,7 +49,7 @@ console.log(this.$appState.$storage('user').$get('friends') // ['Lucy']
 ```
 
 ## API  
-$appState
+### $appState
   - .$set(key, value)  
   - .$get(key)  
   - .$keys()  
@@ -44,6 +57,38 @@ $appState
     - .$set(key, value)
     - .$get(key)
     - .$keys()
+
+### options  
+  - .prefix
+    prefix of the keys using in localStroage  
+  - .localStorage  
+    custom localStorage-like object  
+
+Example:  
+
+appState.js
+```js  
+import Vue from 'vue'  
+import AppState from '@william17/vue-app-state'  
+Vue.use(AppState)
+
+export default {
+  prefix: 'OneApp/',
+  localStorage: window.localStorage
+}
+```
+
+main.js
+```js
+// ...
+import appState from './appState'
+
+new App({
+  el: '#app',
+  render: (h) => h(App),
+  appState
+})
+```
 
 ## Test  
 `npm run test`  
