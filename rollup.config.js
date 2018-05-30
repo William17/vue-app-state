@@ -3,19 +3,19 @@ import babel from 'rollup-plugin-babel'
 import {uglify} from 'rollup-plugin-uglify'
 
 export default [
-	{
-		input: 'src/index.js',
+  {
+    input: 'src/index.js',
     plugins: [
       babel(),
       uglify()
     ],
-		output: {
+    output: {
       name: 'AppState',
-			file: pkg.browser,
-			format: 'umd'
-		},
+      file: pkg.browser,
+      format: 'umd'
+    },
     sourceMap: true
-	},
+  },
   {
     input: 'src/index.js',
     plugins: [
@@ -26,11 +26,11 @@ export default [
       file: pkg.main
     }
   },
-	{
-		input: 'src/index.js',
-		output: {
+  {
+    input: 'src/index.js',
+    output: {
       format: 'es',
       file: pkg.module
     }
-	}
+  }
 ]

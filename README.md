@@ -59,7 +59,7 @@ console.log(this.$appState.$storage('user').$get('friends') // ['Lucy']
     - .$keys()
 
 ### options  
-  - .prefix
+  - .prefix  
     prefix of the keys using in localStroage  
   - .localStorage  
     custom localStorage-like object  
