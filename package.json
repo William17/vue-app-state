@@ -1,6 +1,6 @@
 {
   "name": "@william17/vue-app-state",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Vue plugin for sharing and storing app-level data and state",
   "main": "dist/vue-app-state.cjs.js",
   "module": "dist/vue-app-state.esm.js",
