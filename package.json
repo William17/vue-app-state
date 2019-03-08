@@ -1,6 +1,6 @@
 {
   "name": "@william17/vue-app-state",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "A Vue plugin for sharing and storing app-level data and state",
   "main": "dist/vue-app-state.cjs.js",
   "module": "dist/vue-app-state.esm.js",
@@ -19,16 +19,16 @@
   "author": "William17",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.0.0-beta.49",
-    "@babel/preset-env": "^7.0.0-beta.49",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
     "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^23.0.1",
-    "jest": "^23.0.0",
-    "jest-localstorage-mock": "^2.2.0",
+    "babel-jest": "^24.3.1",
+    "jest": "^24.3.1",
+    "jest-localstorage-mock": "^2.4.0",
     "rollup": "^0.59.4",
-    "rollup-plugin-babel": "^4.0.0-beta.4",
+    "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-uglify": "^4.0.0",
-    "vue": "^2.5.16"
+    "vue": "^2.6.8"
   },
   "jest": {
     "setupFiles": [
